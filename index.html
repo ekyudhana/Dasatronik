@@ -306,35 +306,6 @@ h1 .highlight::after {
   background: rgba(0,212,255,0.05);
 }
 
-.hero-stats {
-  display: flex;
-  gap: 2.5rem;
-  margin-top: 4rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--border);
-  animation: fadeUp 0.6s 0.4s ease both;
-}
-
-.stat-item { text-align: left; }
-
-.stat-num {
-  font-family: 'Syne', sans-serif;
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--white);
-  line-height: 1;
-}
-
-.stat-num span { color: var(--electric); }
-
-.stat-label {
-  font-size: 0.8rem;
-  color: var(--muted);
-  margin-top: 4px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
 /* Hero Visual */
 .hero-visual {
   position: absolute;
@@ -593,75 +564,6 @@ h2 {
   font-size: 0.875rem;
   color: var(--muted);
   line-height: 1.65;
-}
-
-/* ─── TESTIMONI ─── */
-.testimoni-section {
-  padding: 7rem 0;
-}
-
-.testi-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.testi-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.75rem;
-  transition: var(--transition);
-}
-
-.testi-card:hover {
-  border-color: rgba(0,212,255,0.2);
-  transform: translateY(-3px);
-}
-
-.testi-stars {
-  color: var(--amber);
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  letter-spacing: 2px;
-}
-
-.testi-text {
-  font-size: 0.9rem;
-  color: var(--muted);
-  line-height: 1.75;
-  margin-bottom: 1.25rem;
-  font-style: italic;
-}
-
-.testi-author {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.testi-avatar {
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--electric), var(--amber));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 0.85rem;
-  color: var(--navy);
-  font-family: 'Syne', sans-serif;
-}
-
-.testi-name {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--white);
-}
-
-.testi-device {
-  font-size: 0.78rem;
-  color: var(--muted);
 }
 
 /* ─── FAQ ─── */
@@ -1130,7 +1032,6 @@ footer {
 @media (max-width: 900px) {
   .hero-visual { display: none; }
   .layanan-grid { grid-template-columns: repeat(2, 1fr); }
-  .testi-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid { grid-template-columns: 1fr; }
   .about-grid { grid-template-columns: 1fr; }
   .kontak-grid { grid-template-columns: 1fr; }
@@ -1143,10 +1044,8 @@ footer {
   .nav-links.open { display: flex; }
   .hamburger { display: flex; }
   .layanan-grid { grid-template-columns: 1fr; }
-  .testi-grid { grid-template-columns: 1fr; }
   .values-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
   .cta-band { padding: 2.5rem 1.5rem; }
 }
 </style>
@@ -1188,20 +1087,6 @@ footer {
       <div class="hero-actions">
         <a href="kontak.html" class="btn-primary">⚡ Konsultasi Gratis</a>
         <a href="layanan.html" class="btn-secondary">Lihat Layanan →</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-num">500<span>+</span></div>
-          <div class="stat-label">Perangkat diperbaiki</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">6<span>+</span></div>
-          <div class="stat-label">Jenis peralatan</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">98<span>%</span></div>
-          <div class="stat-label">Pelanggan puas</div>
-        </div>
       </div>
     </div>
   </div>
@@ -1326,52 +1211,6 @@ footer {
   </div>
 </section>
 
-<!-- TESTIMONI -->
-<section class="testimoni-section">
-  <div class="container">
-    <div class="section-header fade-up">
-      <span class="section-label">Ulasan Pelanggan</span>
-      <h2>Apa Kata Mereka?</h2>
-      <p class="section-sub">Kepuasan pelanggan adalah prioritas utama kami.</p>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card fade-up">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Kulkas saya sudah tidak dingin selama 2 minggu. Setelah ditangani Dasatronik, langsung normal kembali. Prosesnya cepat dan harganya sesuai estimasi awal."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">BW</div>
-          <div>
-            <div class="testi-name">Budi W.</div>
-            <div class="testi-device">Perbaikan Kulkas</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card fade-up" data-delay="80">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"TV saya ada garis horizontal di layar. Teknisinya datang, didiagnosa, dan selesai diperbaiki dalam satu hari. Sangat profesional dan ramah."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">SR</div>
-          <div>
-            <div class="testi-name">Siti R.</div>
-            <div class="testi-device">Perbaikan TV</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card fade-up" data-delay="160">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Mesin cuci saya error dan tidak mau berputar. Konsultasi gratis dulu via WhatsApp, lalu langsung dijadwalkan. Hasil perbaikannya memuaskan."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">AH</div>
-          <div>
-            <div class="testi-name">Ahmad H.</div>
-            <div class="testi-device">Perbaikan Mesin Cuci</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section class="faq-section">
   <div class="container">
@@ -1413,7 +1252,7 @@ footer {
           Bagaimana cara menghubungi Dasatronik?
           <span class="faq-chevron">▾</span>
         </button>
-        <div class="faq-answer">Anda bisa menghubungi kami melalui WhatsApp, mengisi form di halaman Kontak, atau langsung datang ke workshop kami. Kami siap merespons setiap hari Senin–Sabtu, pukul 08.00–17.00 WIB.</div>
+        <div class="faq-answer">Anda bisa menghubungi kami melalui WhatsApp di +62 895-3215-88922 atau mengisi form di halaman Kontak. Kami siap merespons setiap hari Senin–Sabtu, pukul 08.00–17.00 WIB.</div>
       </div>
     </div>
   </div>
@@ -1457,9 +1296,8 @@ footer {
       </div>
       <div class="footer-col">
         <h4>Kontak</h4>
-        <div class="footer-contact-item"><span>📱</span><span>+62 8xx-xxxx-xxxx</span></div>
-        <div class="footer-contact-item"><span>✉️</span><span>info@dasatronik.com</span></div>
-        <div class="footer-contact-item"><span>📍</span><span>Jl. [Alamat Anda], Kota, Provinsi</span></div>
+        <div class="footer-contact-item"><span>📱</span><span>+62 895-3215-88922</span></div>
+        <div class="footer-contact-item"><span>📍</span><span>Jl. Dasa IV No. 30B, Gandaria Utara, Kebayoran Baru, Jakarta Selatan 12140</span></div>
         <div class="footer-contact-item"><span>🕐</span><span>Senin–Sabtu, 08.00–17.00 WIB</span></div>
       </div>
     </div>
@@ -1470,7 +1308,7 @@ footer {
   </div>
 </footer>
 
-<a href="https://wa.me/628xxxxxxxxxx" class="wa-float" target="_blank" title="Chat WhatsApp">💬</a>
+<a href="https://wa.me/6289532158922" class="wa-float" target="_blank" title="Chat WhatsApp">💬</a>
 
 <script>// ─── NAV SCROLL ───
 const nav = document.querySelector('nav');
@@ -1525,24 +1363,6 @@ document.querySelectorAll('.faq-item').forEach(item => {
     });
   }
 });
-
-// ─── KONTAK FORM ───
-const form = document.getElementById('kontakForm');
-if (form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = '✓ Pesan Terkirim!';
-    btn.style.background = '#25d366';
-    btn.style.color = '#fff';
-    setTimeout(() => {
-      btn.textContent = 'Kirim Pesan';
-      btn.style.background = '';
-      btn.style.color = '';
-      form.reset();
-    }, 3000);
-  });
-}
 </script>
 </body>
 </html>
